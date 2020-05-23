@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             
 
             $user->image()->save(factory(App\Image::class)->make([
-                'url' => 'https://lorempixel.com/90/90'
+                'url' => 'https://lorempixel.com/90/90/'
             ]));
 
         });

@@ -15,17 +15,10 @@ class CreateTagsTable extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->biginteger('tag_id')->unsigned();
-     
-            $table->text('body');
 
-            $table->morphs('commentable');
-
+            $table->string('name');
+            
             $table->timestamps();
-
-            $table->foreign('tag_id')->references('id')->on('tags')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
         });
     }
 
